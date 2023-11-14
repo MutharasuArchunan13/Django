@@ -14,4 +14,4 @@ def upload_file(request):
     return render(request , 'upload.html')
 def task_status (request):
     tasks = Task.objects.all()
-    return render(request,'staus,html',{'tasks':tasks})
+    return render(request,'staus.html',{'tasks':tasks})
