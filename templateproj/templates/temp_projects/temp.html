@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>templates</title>
+    <link rel="stylesheet" href="{% static 'css/temp.css'%}">
 </head>
 <body>
     <h1>this is my first template project</h1>
     {{datetim}}
+    <img src={% static "images/wall2.jpg" %}>
+    <p> this is my contents on the html file </p>
 </body>
 </html>
