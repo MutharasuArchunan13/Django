@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model File</title>
+</head>
+<body>
+    <h1>Lab Data</h1>
+
+    {% if data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Lab ID</th>
+                    <th>Lab Name</th>
+                    <th>Lab Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lab_data in data %}
+                    <tr>
+                        <td>{{ lab_data.lab_id }}</td>
+                        <td>{{ lab_data.lab_name }}</td>
+                        <td>{{ lab_data.lab_address }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No lab data available.</p>
+    {% endif %}
+</body>
+</html>
