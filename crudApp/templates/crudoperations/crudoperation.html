@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>student File</title>
+    <link rel="stylesheet" href="{% static 'crudoperations/form.css' %}">
 </head>
 <body >
     
     <table>
-       <h1> <th>name</th>
+       <h1>
+        <th>S.ID</th> 
+        <th>name</th>
         <th>RollNo</th>
-        <th>Id</th></h1>
+        <th>Id</th>
+    <th>Operations</th></h1>
       <tr>
         {% for s in student %}
         <td>{{s.id}}</td>
         <td>{{ s.name }}</td>
         <td>{{s.roll}}</td>
-        <td>{{s.sid}}</td>
+        <td>{{s.sid}}</td> <td><a href="/update/{{s.id}}">UPDATE</a> <a href="/delete/{{s.id}}">DELETE</a></td>
       </tr>
       {% endfor%}
     </table>
